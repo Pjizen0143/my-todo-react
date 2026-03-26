@@ -1,4 +1,5 @@
-import { useState, useEffect, use } from "react" 
+import { useState, useEffect } from "react" 
+import { Link } from "react-router-dom"
 import axios from "axios"
 
 const API_URL = 'https://69c52ae68a5b6e2dec2bea5e.mockapi.io/api/todo/todoList'
@@ -39,7 +40,9 @@ function App() {
           <div>
             <p>
               {item.task_name}: {item.is_done ? 'Done' : 'Not Done'}
-              <button>Edit</button>
+              <Link to={`/edit/${item.id}`}>
+                <button>Edit</button>
+              </Link>
               <button
                 onClick={() => deleteTodo(item.id)}
               >
