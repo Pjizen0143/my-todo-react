@@ -29,7 +29,7 @@ function EditTodo() {
     fetchTodo();
   }, [fetchTodo]);
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
     setTodo((prev) => ({
       ...prev,
