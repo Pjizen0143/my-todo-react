@@ -1,0 +1,28 @@
+#welcome {
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#task-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.taskBox {
+    display: flex;
+    margin: 10px ;
+    padding: 10px;
+    border: 1px solid #FAFAFA;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    margin: 0 0 0 10px;
+}

@@ -53,7 +53,7 @@ function EditTodo() {
   if (isLoading) return <p>Loading task details...</p>;
 
   return (
-    <div>
+    <div style={{ alignItems: 'center', display: 'flex', flexDirection: 'column', marginTop: '2rem' }}>
       <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
         <h1>Edit Todo</h1>
       </Link>

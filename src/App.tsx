@@ -40,18 +40,18 @@ function App() {
     <>
     <div>
       <h1 id="welcome">Welcome to React</h1>
-      <div>
+      <div id="task-list">
         {todoList.map((item) => (
-          <div key={item.id}> 
-            <p>
-              {item.task_name}: {item.is_done ? 'Done' : 'Not Done'}
-              <Link to={`/edit/${item.id}`}>
-                <button>Edit</button>
-              </Link>
-              <button onClick={() => deleteTodo(item.id)}>
-                Delete
-              </button>
-            </p>
+          <div key={item.id} className="taskBox"> 
+              <div>
+                {item.task_name}: {item.is_done ? 'Done' : 'Not Done'}
+                <Link to={`/edit/${item.id}`}>
+                  <button className="btn btn-primary">Edit</button>
+                </Link>
+                <button className="btn btn-danger" onClick={() => deleteTodo(item.id)}>
+                  Delete
+                </button>
+            </div>
           </div>
         ))}
       </div>
