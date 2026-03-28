@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react" 
+import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import axios from "axios"
 import './App.css'
@@ -6,7 +6,7 @@ import './App.css'
 const API_URL = 'https://69c52ae68a5b6e2dec2bea5e.mockapi.io/api/todo/todoList'
 
 interface TodoItem {
-  id: string; 
+  id: string;
   task_name: string;
   is_done: boolean;
 }
@@ -38,11 +38,11 @@ function App() {
 
   return (
     <>
-    <div>
-      <h1 id="welcome">Welcome to React</h1>
-      <div id="task-list">
-        {todoList.map((item) => (
-          <div key={item.id} className="taskBox"> 
+      <div>
+        <h1 id="welcome">Welcome to React</h1>
+        <div id="task-list">
+          {todoList.map((item) => (
+            <div key={item.id} className="taskBox">
               <div>
                 {item.task_name}: {item.is_done ? 'Done' : 'Not Done'}
                 <Link to={`/edit/${item.id}`}>
@@ -51,11 +51,11 @@ function App() {
                 <button className="btn btn-danger" onClick={() => deleteTodo(item.id)}>
                   Delete
                 </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
     </>
   )
 }
